@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Feedback Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 28px 34px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      max-width: 440px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1.4px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .btn {
+      text-align: center;
+      margin-top: 27px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 11px 35px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Employee Feedback Form</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" value="Manas" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" value="manasd987@gmail.com" required>
+
+      <label for="dept">Department:</label>
+      <input type="text" id="dept" value="scai" required>
+
+      <label for="role">Role/Position:</label>
+      <input type="text" id="role" value="student" required>
+
+      <label for="rating">Overall Experience:</label>
+      <select id="rating" required>
+        <option>Excellent</option>
+        <option>Good</option>
+        <option>Average</option>
+        <option>Poor</option>
+      </select>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback">nill</textarea>
+
+      <div class="btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
