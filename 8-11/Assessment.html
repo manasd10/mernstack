@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: repeating-linear-gradient(
+    45deg,
+    #f8f2e9,
+    #f8f2e9 30px,
+    #f6ebdf 30px,
+    #f6ebdf 60px
+  );
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  text-align: center;
+  color: #b33a3a;
+  margin-top: 60px;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff4;
+}
+h3 {
+  text-align: center;
+  color: #b33a3a;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+table {
+  border-collapse: collapse;
+  min-width: 75vw;
+  background: #fffafaee;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px #eebebe77;
+}
+th, td {
+  border: 2px solid #b33a3a33;
+  padding: 18px 28px;
+  font-size: 1.15em;
+  text-align: left;
+}
+th {
+  background: #fddede;
+  color: #b33a3a;
+  font-weight: bold;
+  font-size: 1.13em;
+}
+tr:nth-child(even) td {
+  background-color: #fcf7f4;
+}
+tr:last-child td {
+  border-bottom: 2px solid #b33a3a33;
+}
+.table-container table {
+  border: 3px solid #b33a3a;
+}
+</style>
+</head>
+<body>
+  <h2>Employee Attendance Table</h2>
+  <h3>Attendance Records</h3>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Attendance Status</th>
+      </tr>
+      <tr>
+        <td>12345</td>
+        <td>example1</td>
+        <td>IT</td>
+        <td>Present</td>
+      </tr>
+      <tr>
+        <td>67890</td>
+        <td>example2</td>
+        <td>HR</td>
+        <td>Absent</td>
+      </tr>
+      <tr>
+        <td>54321</td>
+        <td>example3</td>
+        <td>Finance</td>
+        <td>Present</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
