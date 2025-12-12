@@ -1,0 +1,215 @@
+/* ============================================
+   MODERN FINANCE UI THEME 2025
+   Smooth + Professional + Glass + Neo Soft
+============================================ */
+
+/* LIGHT THEME */
+:root {
+  --bg: #eef7f6;                     /* Soft mint background */
+  --card: rgba(255, 255, 255, 0.9);  /* Soft glass white */
+  --text: #002b32;                    /* Deep teal */
+  --text-soft: #527a84;
+
+  --accent: #00b894;                 /* Finance green */
+  --accent2: #00856a;
+
+  --success: #00c853;
+  --danger: #ff5252;
+
+  --glass: rgba(255, 255, 255, 0.6);
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+  --bg: #001418;
+  --card: rgba(4, 29, 35, 0.65);
+  --text: #dff9fc;
+  --text-soft: #8fbcc5;
+
+  --accent: #00e6ff;       /* Neon aqua */
+  --accent2: #00b9c9;
+
+  --success: #00ffa6;
+  --danger: #ff4f6d;
+
+  --glass: rgba(0, 20, 25, 0.55);
+  --shadow: 0 0 25px rgba(0, 255, 255, 0.10);
+}
+
+/* ============================================
+   GLOBAL BASE
+============================================ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background var(--transition), color var(--transition);
+  scroll-behavior: smooth;
+}
+
+body {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  background: var(--accent);
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 0;
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+/* ============================================
+   CARDS & PANELS
+============================================ */
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   BUTTONS
+============================================ */
+
+.btn,
+.small-btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover,
+.small-btn:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+/* DANGER BUTTON */
+.logout {
+  background: var(--danger) !important;
+}
+
+.logout:hover {
+  background: #d63a3a !important;
+}
+
+/* ============================================
+   INPUTS / SELECTS
+============================================ */
+
+input,
+select,
+textarea {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 184, 148, 0.35);
+}
+
+/* ============================================
+   TAG / BADGE
+============================================ */
+
+.tag {
+  padding: 4px 9px;
+  background: var(--accent2);
+  border-radius: 6px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+/* ============================================
+   TITLES
+============================================ */
+
+h2, h3 {
+  color: var(--text);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* ============================================
+   TRANSACTION ITEMS
+============================================ */
+
+.transaction-item {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+
+.transaction-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+/* ============================================
+   CHARTS
+============================================ */
+
+canvas {
+  filter: drop-shadow(0 5px 12px rgba(0,0,0,0.15));
+  margin-top: 10px;
+}
