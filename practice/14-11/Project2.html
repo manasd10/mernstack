@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPS Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .panel {
+            width: 45%;
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .score {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        #restart {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Rock Paper Scissors</h1>
+
+    <div class="container">
+
+        <div class="panel">
+            <h2>User</h2>
+
+            <button onclick="play('rock')">Rock</button>
+            <button onclick="play('paper')">Paper</button>
+            <button onclick="play('scissors')">Scissors</button>
+
+            <p id="userChoice">Your choice: -</p>
+            <p class="score">Your Score: <span id="uScore">0</span></p>
+        </div>
+
+        <div class="panel">
+            <h2>Computer</h2>
+
+            <p id="computerChoice">Computer choice: -</p>
+            <p class="score">Computer Score: <span id="cScore">0</span></p>
+        </div>
+
+    </div>
+
+    <h2 style="text-align:center;" id="result">Make your move...</h2>
+
+    <div style="text-align:center;">
+        <button id="restart" onclick="resetGame()">Restart</button>
+    </div>
+
+    <script>
+        let userScore = 0;
+        let compScore = 0;
+
+        function play(userMove) {
+            let options = ["rock", "paper", "scissors"];
+            let compMove = options[Math.floor(Math.random() * 3)];
+
+            document.getElementById("userChoice").textContent = "Your choice: " + userMove;
+            document.getElementById("computerChoice").textContent = "Computer choice: " + compMove;
+
+            let result = "";
+
+            if (userMove === compMove) {
+                result = "Tie!";
+            } else if (
+                (userMove === "rock" && compMove === "scissors") ||
+                (userMove === "paper" && compMove === "rock") ||
+                (userMove === "scissors" && compMove === "paper")
+            ) {
+                userScore++;
+                result = "You Win!";
+            } else {
+                compScore++;
+                result = "You Lose!";
+            }
+
+            document.getElementById("result").textContent = result;
+            document.getElementById("uScore").textContent = userScore;
+            document.getElementById("cScore").textContent = compScore;
+        }
+
+        function resetGame() {
+            userScore = 0;
+            compScore = 0;
+
+            document.getElementById("uScore").textContent = 0;
+            document.getElementById("cScore").textContent = 0;
+            document.getElementById("userChoice").textContent = "Your choice: -";
+            document.getElementById("computerChoice").textContent = "Computer choice: -";
+            document.getElementById("result").textContent = "Game reset. Make your move!";
+        }
+    </script>
+
+</body>
+</html>
